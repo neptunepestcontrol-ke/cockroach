@@ -8,7 +8,7 @@ var a=document.createElement("b");a.textContent="IMAGE NEEDED";var b=document.cr
 d.append(a,b,c);i.replaceWith(d)}
 document.querySelectorAll("img.slot").forEach(function(i){i.addEventListener("error",function(){ph(i)});if(i.complete&&i.naturalWidth===0)ph(i)});
 // Price calculator
-var sel=document.getElementById("bd"),dc=document.getElementById("disc"),out=document.getElementById("out"),wb=document.getElementById("wab"),ww=document.getElementById("waw");
+var sel=document.getElementById("bd"),dc=document.getElementById("disc"),out=document.getElementById("out"),ww=document.getElementById("waw");
 if(sel){for(var n=1;n<=C.maxBedrooms;n++){var o=document.createElement("option");o.value=n;o.textContent=n+(n===1?" bedroom":" bedrooms");sel.appendChild(o)}
 var o2=document.createElement("option");o2.value="q";o2.textContent=(C.maxBedrooms+1)+"+ bedrooms, office or shop";sel.appendChild(o2);
 document.getElementById("calc").addEventListener("click",function(){var v=sel.value,t,msg="Hello Neptune, I need "+document.body.dataset.name+". ";
@@ -17,7 +17,7 @@ else{var n=+v,p=P.base+P.extra*(n-1),f=Math.round(p*(1-C.discount));
 t="Estimated cost for "+n+(n===1?" bedroom":" bedrooms")+": "+ks(p)+", with 4 months of cover.";
 if(dc.checked&&C.discount>0){t+=" With "+Math.round(C.discount*100)+"% off: "+ks(f)+".";msg+="I want the "+Math.round(C.discount*100)+"% offer. "}
 msg+="Home size: "+n+(n===1?" bedroom.":" bedrooms.")+" Estimate: "+ks(p)+"."}
-out.textContent=t;wb.href="tel:"+C.phone;wb.style.display="inline-block";ww.href=wa(msg);ww.style.display="inline-block"})}
+out.textContent=t;ww.href=wa(msg);ww.style.display="inline-block"})}
 // Quote form: sends the details to WhatsApp
 var f=document.getElementById("qf");
 if(f)f.addEventListener("submit",function(e){e.preventDefault();var d=new FormData(f);window.open(wa("Hello Neptune, I need "+document.body.dataset.name+". Name: "+d.get("name")+". Phone: "+d.get("phone")+". Area: "+d.get("area")+". Bedrooms: "+d.get("beds")+"."),"_blank")});

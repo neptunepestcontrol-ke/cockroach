@@ -15,7 +15,7 @@ document.getElementById("calc").addEventListener("click",function(){var v=sel.va
 if(v==="q"){t="Larger homes and commercial sites are quoted individually. Call us and we will give you your price.";msg+="Please quote me for a larger home or commercial site."}
 else{var n=+v,p=P.base+P.extra*(n-1),f=Math.round(p*(1-C.discount));
 t="Estimated cost for "+n+(n===1?" bedroom":" bedrooms")+": "+ks(p)+", with 4 months of cover.";
-if(dc.checked&&C.discount>0){t+=" With "+Math.round(C.discount*100)+"% off: "+ks(f)+".";msg+="I want the "+Math.round(C.discount*100)+"% offer. "}
+if(dc.checked&&C.discount>0){t+=" With "+Math.round(C.discount*100)+"% off your first service: "+ks(f)+".";msg+="I want the "+Math.round(C.discount*100)+"% offer. "}
 msg+="Home size: "+n+(n===1?" bedroom.":" bedrooms.")+" Estimate: "+ks(p)+"."}
 out.textContent=t;ww.href=wa(msg);ww.style.display="inline-block"})}
 // Quote form: sends the details to WhatsApp

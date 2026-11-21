@@ -25,4 +25,4 @@ var sm=document.getElementById("showmore");if(sm)sm.addEventListener("click",fun
 var bg=document.getElementById("burger"),nv=document.getElementById("nav");if(bg&&nv){bg.addEventListener("click",function(){bg.setAttribute("aria-expanded",nv.classList.toggle("open"))});nv.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nv.classList.remove("open");bg.setAttribute("aria-expanded","false")})})}
 document.querySelectorAll("[data-wa]").forEach(function(a){a.href=wa(a.dataset.wa)});
 if(C.otherPage){var ca=document.getElementById("crossa"),cp=document.getElementById("cross");if(ca&&cp){ca.href=C.otherPage;cp.hidden=false}}
-document.querySelectorAll("[data-tel]").forEach(function(a){a.href="tel:"+C.phone;a.textContent=a.dataset.tel==="1"?"Call "+C.phoneDisplay:a.textContent})})();
+document.querySelectorAll("[data-tel]").forEach(function(a){a.href="tel:"+C.phone;if(a.dataset.tel==="1")a.textContent="Call "+C.phoneDisplay})})();

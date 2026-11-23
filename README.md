@@ -7,6 +7,7 @@ One page. `index.html` is the page, so the repo address opens it directly. Plain
 - **Phone, WhatsApp, prices, discount:** `assets/js/config.js`.
 - **Colours and layout:** `assets/css/style.css`.
 - **Images:** see `IMAGES.md`. Save files with the exact names into `assets/img/`.
+- **Thank-you page:** `thanks.html` opens after the form is sent. Track it as the lead conversion in Google Ads. Turn it off by setting `thanksPage` to an empty string in `assets/js/config.js`.
 - **Link to the other service page:** set in `otherPage` in `assets/js/config.js` (already filled in: `https://neptunepestcontrol-ke.github.io/bedbugs/`). It shows at the bottom of "Where we work".
 
 ## Publish with GitHub Pages

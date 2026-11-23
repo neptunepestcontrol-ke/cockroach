@@ -20,7 +20,7 @@ msg+="Home size: "+n+(n===1?" bedroom.":" bedrooms.")+" Estimate: "+ks(p)+"."}
 out.textContent=t;ww.href=wa(msg);ww.style.display="inline-block"})}
 // Quote form: sends the details to WhatsApp
 var f=document.getElementById("qf");
-if(f)f.addEventListener("submit",function(e){e.preventDefault();var d=new FormData(f);window.open(wa("Hello Neptune, I need "+document.body.dataset.name+". Name: "+d.get("name")+". Phone: "+d.get("phone")+". Area: "+d.get("area")+". Bedrooms: "+d.get("beds")+"."),"_blank")});
+if(f)f.addEventListener("submit",function(e){e.preventDefault();var d=new FormData(f);window.open(wa("Hello Neptune, I need "+document.body.dataset.name+". Name: "+d.get("name")+". Phone: "+d.get("phone")+". Area: "+d.get("area")+". Bedrooms: "+d.get("beds")+"."),"_blank");if(C.thanksPage)setTimeout(function(){location.href=C.thanksPage},400)});
 var sm=document.getElementById("showmore");if(sm)sm.addEventListener("click",function(){document.querySelectorAll(".fq.more").forEach(function(d){d.hidden=false});sm.remove()});
 var bg=document.getElementById("burger"),nv=document.getElementById("nav");if(bg&&nv){bg.addEventListener("click",function(){bg.setAttribute("aria-expanded",nv.classList.toggle("open"))});nv.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nv.classList.remove("open");bg.setAttribute("aria-expanded","false")})})}
 document.querySelectorAll("[data-wa]").forEach(function(a){a.href=wa(a.dataset.wa)});

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cockroach.neptunepestcontrol.co.ke/sitemap.xml

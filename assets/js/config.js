@@ -2,7 +2,7 @@
 window.NEPTUNE = {
   phone: "+254716505064", phoneDisplay: "0716 505 064", whatsapp: "254716505064",
   thanksPage: "thanks.html",       // page opened after the form is sent. Set to "" to turn it off
-  otherPage: "https://bedbug.neptunepestcontrol.co.ke/",                   // optional: paste the live address of the other service page to show a link to it
+  otherPage: "https://neptunepestcontrol-ke.github.io/bedbugs/",                   // optional: paste the live address of the other service page to show a link to it
   discount: 0.10,                  // 10% offer. Set to 0 to remove it.
   maxBedrooms: 6,                  // above this, we ask the visitor to message for a quote
   pricing: {
